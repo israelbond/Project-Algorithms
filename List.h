@@ -3,6 +3,8 @@ using namespace std;
 
 struct RBNode
 {
+    RBNode();
+
 	char color;
 	int data;
 
@@ -18,7 +20,7 @@ class RBTree
 	~RBTree();
 	void Insert(int);
 	void Remove(int);
-	void search(int);
+	void Search(int);
 	void DisplayOne();
 	void DisplayTree();
 
@@ -26,5 +28,6 @@ class RBTree
 	RBNode * root;
 
 	void DisplayTree(RBNode *&);
+    void DeleteTree(RBNode *&);
 
 };

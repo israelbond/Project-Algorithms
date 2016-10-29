@@ -1,5 +1,16 @@
 #include "List.h"
 
+
+
+
+RBNode::RBNode()
+{
+    color = 'B';
+    data = 0;
+    left = right = NULL;
+}
+
+
 RBTree::RBTree()
 {
    root = NULL;
@@ -7,11 +18,12 @@ RBTree::RBTree()
 
 RBTree::~RBTree()
 {
-  if(root) return DeleteTree(root);
+  if(root) DeleteTree(root);
 }
 
 void RBTree::Insert(int num)
 {
+
 }
 
 void RBTree::Remove(int num)
@@ -31,13 +43,21 @@ void RBTree::DisplayTree()
 	if(root) DisplayTree(root);
 }
 
-void RBTree::Display(RBNode *& root)
+void RBTree::DisplayTree(RBNode *& root)
 {
 	if(!root) return;
-	Display(root->left);
-	cout <<"\t Data: "<< root->data <<"\t Color: "<< color"\n";
-	Display(root->right);
+	DisplayTree(root->left);
+	cout <<"\t Data: "<< root->data <<"\t Color: "<< root->color<<"\n";
+	DisplayTree(root->right);
 
 }
 
-//RBTree::
+void RBTree::DeleteTree(RBNode *& root)
+{
+    if(!root) return;
+    
+    DeleteTree(root->left);
+    DeleteTree(root->right);
+    delete root;
+    root = NULL;
+}

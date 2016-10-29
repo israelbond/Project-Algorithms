@@ -1,8 +1,9 @@
 #include "List.h"
 
 
-int Main()
+int main()
 {
-	cout <<"Help Hello"<<endl;
+	cout <<"UP AND RUNNING"<<endl;
+
 return 0;
 }
