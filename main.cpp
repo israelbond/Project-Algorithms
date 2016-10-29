@@ -1,6 +1,8 @@
 #include "list.h"
 
+
 int main()
 {
-	return 0;
+	cout <<"Help Hello"<<endl;
+return 0;
 }
