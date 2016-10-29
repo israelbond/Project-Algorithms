@@ -1,7 +1,7 @@
-#include "list.h"
+#include "List.h"
 
 
-int main()
+int Main()
 {
 	cout <<"Help Hello"<<endl;
 return 0;
